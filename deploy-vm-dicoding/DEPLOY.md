@@ -77,9 +77,9 @@
 8. Exit the SSH and open it again
 9. Install NVM
 
-   ```bash
-   nvm install v14.17.6
-   ```
+    ```bash
+    nvm install v14.17.6
+    ```
 10. Change directory
    
     ```bash
@@ -88,9 +88,9 @@
 
 11. Install modules
 
-   ```bash
-   npm install
-   ```
+    ```bash
+    npm install
+    ```
 
 12. Run server
 
@@ -105,10 +105,12 @@
     ```bash
     External IP:5000
     ```
+    
 15. Open `http://notesapp-v1.dicodingacademy.com/`
 16. Click `Change URL`
 17. Input your URL (step 14)
 18. Try and use the application, check if it is working properly or not
+19. Don't forget to stop the VM if you don't use it
 
 ## INSTALLING NODEJS PROCESS MANAGER (OPTIONAL)
 Process manager is used to monitor web servers on Compute Engine instances.
