@@ -70,9 +70,9 @@
 
 7. Install NVM
 
-  ```bash
-  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
-  ```
+   ```bash
+   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+   ```
 
 8. Exit the SSH and open it again
 9. Install NVM
@@ -80,7 +80,7 @@
    ```bash
    nvm install v14.17.6
    ```
-   
+
 10. Change directory
    
     ```bash
