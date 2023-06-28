@@ -80,6 +80,7 @@
    ```bash
    nvm install v14.17.6
    ```
+   
 10. Change directory
    
     ```bash
