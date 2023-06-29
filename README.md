@@ -1,2 +1,2 @@
 # DICODING COURSES
-Profile app I made for deploying on App Engine
+Profile app I made to deploy on App Engine
