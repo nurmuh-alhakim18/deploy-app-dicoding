@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+div h1 {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+header figure {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px;
+  border-bottom: 1px solid black;
+}
+
+figure img {
+  height: 160px;
+  width: 150px;
+  border-radius: 50%;
+}
+
+.content {
+  display: flex;
+  justify-content: space-around;
+}
+
+.info {
+  padding: 50px;
+}
+
+ul {
+  padding-left: 0px;
+}
+
+p {
+  padding: 10px 0px;
+}
+
+li {
+  list-style-type: none;
+  padding: 10px 0px;
+  border-bottom: 1px solid black;
+}
+
+.contact {
+  text-align: center;
+}
+
+a img {
+  width: 40px;
+  padding: 10px;
+}
