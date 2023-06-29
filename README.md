@@ -1,2 +1,2 @@
 # DICODING COURSES
-Documentations of app deployment from Dicoding's courses
+Profile app I made for deploying on App Engine
