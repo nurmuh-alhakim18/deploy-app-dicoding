@@ -3,7 +3,7 @@
 ## CREATE FIREWALL FROM CONSOLE OR CLOUD SHELL
 
 ### CONSOLE
-1. Choose VPC Network > Firewall
+1. On navigation menu, choose `VPC Network` > `Firewall`
 2. Click `CREATE FIREWALL RULE`
 3. Input the configurations as below:
     - Name: app-server-firewall
@@ -26,7 +26,7 @@
    ```
 
 ## CREATE COMPUTE ENGINE
-1. Choose Compute Engine > VM instances
+1. On navigation menu, choose `Compute Engine` > `VM instances`
 2. Click `CREATE INSTANCE`
 3. Input the configurations as the below:
     - Name: web-server
