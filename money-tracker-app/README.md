@@ -33,8 +33,8 @@
 3. Set up service account to project
     - Open service account key you have downloaded
     - Open editor on Cloud Shell by clicking `Open Editor`
-    - Open `servieaccountkey.json`
-    - Change the `project_id`, `private_key_id`, `private_key` based on your own key
+    - Open `money-tracker-api` > `serviceaccountkey.json`
+    - Change the `project_id`, `private_key_id`, `private_key`, `client_id`, and `client_x509_cert_url` based on your own key
 4. Create Buckets
     - On navigation menu, choose `Cloud Storage` > `Buckets`
     - Click `CREATE`
@@ -47,8 +47,13 @@
       - Access control: Uniform
       - Protection tools: None
     - Click `CREATE`
+    - On Buckets page, select triple dots beside the created bucket
+    - Click `Edit access` > `ADD PRINCIPAL`
+    - Input `allUsers` on New principals field
+    - Choose `Cloud Storage` > `Storage Object Viewer`
+    - Click `Save` and `ALLOW PUBLIC ACCESS`
 5. Set Cloud Storage to project
-    - On Editor, open `modules` > `imgUpload.js`
+    - On Editor, open `money-tracker-api` > `modules` > `imgUpload.js`
     - Change `projectId` and `bucketName` based on yours
 6. Create Cloud SQL Instance
     - On navigation menu, choose `SQL`
@@ -88,7 +93,7 @@
      ```
 
     - Create table on your db
-      - On editor, open `create_table.sql`
+      - On editor, open `money-tracker-api` > `create_table.sql`
       - Copy the all lines
       - Back to your terminal that are connected to SQL instance and paste them
       - If you want to check the datas in table
@@ -106,10 +111,10 @@
       - Network: 0.0.0.0/0
     - Click `Save`
 9. Set SQL instance to project
-    - On editor, open `routes` > `record.js`
+    - On editor, open `money-tracker-api` > `routes` > `record.js`
     - Change `host`, `database`, and `password` based on yours
 10. Deploy back-end app
-    - On editor, open `app.yaml`
+    - On editor, open `money-tracker-api` > `app.yaml`
     - Change the service from `backend` to `default`
     - Back to terminal
     - Change directory to where the yaml file is
@@ -135,6 +140,64 @@
       ```
     
     - Input `Y` to continue to update the service and wait for it
-    - On navigation menu, choose `App Engine` > `Services`
-    - Click `backend` to check if the app is working
+    - To check the app, open the URL provided by this command
+
+      ```bash
+      gcloud app browse -s backend
+      ```
+
     - `Response Success!` should be shown on the page
+
+## DEPLOYING FRONT-END
+1. Set the back-end to front-end
+    - Copy the back-end URL provided by this command
+
+      ```bash
+      gcloud app browse -s backend
+      ```
+
+    - On editor, open `money-tracker` > `application` > `models` > `Record_model.php`
+    - Change `base_uri` to your back-end URL
+2. Deploy front-end app
+    - On editor, open `money-tracker` > `app.yaml`
+    - Change directory to where the yaml file is
+
+      If you are in money-tracker-api directory
+
+      ```bash
+      cd ../money-tracker
+      ```
+
+      If you are in home directory
+
+      ```bash
+      cd money-tracker
+      ```
+
+    - Deploy the app
+
+      ```bash
+      gcloud app deploy
+      ```
+
+    - Input `Y` to continue and wait for a while until the process is completed
+    - On editor, open `money-tracker` > `config` > `config.php`
+    - Copy the url provided by this command
+
+      ```bash
+      gcloud app browse -s frontend
+      ```
+
+    - Uncomment the line and change `$config['base_url']` to your front-end URL, like this 'your-frontend-url'
+    - Redeploy the app
+
+      ```bash
+      gcloud app deploy
+      ```
+    
+    - Input `Y` to continue to update the service and wait for it
+    - To check the if the whole application is working properly, open the URL provided by this command
+
+      ```bash
+      gcloud app browse -s frontend
+      ```
