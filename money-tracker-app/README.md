@@ -34,7 +34,7 @@
     - Open service account key you have downloaded
     - Open editor on Cloud Shell by clicking `Open Editor`
     - Open `money-tracker-api` > `serviceaccountkey.json`
-    - Change the `project_id`, `private_key_id`, `private_key`, `client_id`, and `client_x509_cert_url` based on your own key
+    - Change everything insise with your own key
 4. Create Buckets
     - On navigation menu, choose `Cloud Storage` > `Buckets`
     - Click `CREATE`
